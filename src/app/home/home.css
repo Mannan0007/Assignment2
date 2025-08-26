@@ -153,3 +153,19 @@
   font-family: 'Foco', Arial, sans-serif !important;
   font-weight: 700!important;
 }
+
+
+
+
+
+.carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;      /* makes it round */
+  background-color: #666;  /* default grey */
+  opacity: 1;              /* removes Bootstrap’s fading */
+}
+
+.carousel-indicators .active {
+  background-color: #007bff;  /* active = white */
+}
