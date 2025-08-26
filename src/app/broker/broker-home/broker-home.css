@@ -1,0 +1,204 @@
+.main-div{
+background-image: url('/assets/img/Broker-home-2x.webp');
+    background-repeat: no-repeat;
+background-size: contain;
+height: 100vh;
+display: flex;
+align-items: center;
+}
+.center-text{
+    color: #fff;
+    /* background-color: black; */
+    width: 93%;
+    text-align: center;
+    margin-left: auto;
+    
+    /* height: 100%; */
+    /* justify-content: center; */
+    
+}
+.center-text h1{
+    text-align: start;
+    font-size: 48px;
+    font-weight: 700;
+    font-family: Foco, Arial, sans-serif !important;
+}
+
+.headings{
+    display: flex;
+    flex-direction: column;
+}
+.center-text h5{
+    margin-top: 20px;
+    text-align: start;
+    font-size: 18px;
+    line-height: 25px;
+    /* font-weight: 700; */
+font-family: Foco, Arial, sans-serif !important;    
+}
+.orange-text{
+    color: #DB6431;
+}
+
+.broker-links{
+    display: flex;
+      flex-direction: column;
+      /* background-color: #fff; */
+}
+.broker-links a{
+    color: #DB6431;
+    text-align: start;
+    font-size: 18px;
+    margin-bottom: 11px;
+}
+.login-button{
+    color: #fff;
+    width: 10%;
+    border: white;
+    border-radius: 10px;
+    height: 42px;
+    background-color: #DB6431;
+    font-size: 18px;
+    font-family: Foco, Arial, sans-serif !important;
+
+}
+
+.broker-flow{
+    text-align: center;
+    color: skyblue;
+}
+
+.hex-card {
+  width: 250px;
+  height: 280px;
+  /* background: red; */
+  border: 4px solid #f25c2d;  /* orange border */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* transition: transform 0.3s; */
+}
+
+
+.hex-content {
+  padding: 20px;
+}
+.hex-wrapper {
+  width: 260px;
+  height: 290px;
+  background: #f25c2d; /* border color */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hex-card {
+  width: 250px;
+  height: 280px;
+  background: #fff; /* inner bg */
+  clip-path: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.broker-conditions{
+    display: flex;
+    /* background-color: green; */
+    margin: 40px;
+    padding: 20px;
+    gap: 100px;
+}
+.broker-left {
+
+    font-size: 40px;
+    line-height: 45px;
+    font-weight: 600;
+    font-family: Poppins, Arial, sans-serif !important;
+    /* background-color: aliceblue; */
+}
+#broker-img{
+    height: 270px;
+   
+}
+#start-button{
+    margin: 20px;
+    background-color: #f15d22 !important;
+    color: #fff !important;    
+    border-radius: 9px;
+    border: none;
+    width: 160px;
+    height: 45px;
+    border: 1px solid #fff;
+    font-size: 18px;
+    word-spacing: 2px;
+}
+
+   .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 columns */
+      grid-template-rows: repeat(2, 1fr);    /* 2 rows */
+      gap: 10px;
+      width: 810px;   
+      height: 690px;
+
+      /* background-color: red; */
+      /* border: 1px solid; */
+    }
+
+    .grid-container-head{
+        color: #316fb9;;
+        line-height: 25px;
+        font-size: 26px;
+        font-family: Poppins, Arial, sans-serif ;
+        font-weight: 500;
+
+    }
+    .grid-item {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid gray;
+      border-radius: 6px;
+      /* align-items: center; */
+      text-align: start;
+      padding: 20px;
+      /* justify-content: center; */
+      line-height: 25px;
+      font-size: 16px;
+      color: #728095;
+      font-family: Poppins, Arial, sans-serif !important;
+    }
+    .support-resouce{
+        margin-top: 10px;
+        width: 96%;
+        border: 1px solid gray;
+        border-radius: 6px;
+        padding: 20px;
+        line-height: 25px;
+            font-family: Poppins, Arial, sans-serif !important;
+        /* font-size: 24px; */
+        /* background-color: red; */
+    }
+    #grey{
+           color: #728095;
+           font-size: 16px;
+               font-family: Poppins, Arial, sans-serif !important;
+   
+    }
+    #logos{
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+
+    .navigating{
+        /* background-color: red; */
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+    }

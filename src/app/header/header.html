@@ -1,0 +1,75 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-3 text-black">
+  <a class="navbar-brand" href="#">
+    <img src="/assets/img/logo-main.svg" alt="ACHT Logo" />
+  </a>
+
+  <!-- Hamburger toggle for mobile -->
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="offcanvas"
+    data-bs-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div
+    class="offcanvas offcanvas-end sidebar-custom bg-light text-black"
+    aria-labelledby="sidebarLabel"
+    tabindex="-1"
+    id="navbarNav"
+  >
+    <!-- Left side links -->
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="sidebarLabel">Menu</h5>
+      <button
+        type="button"
+        class="btn-close btn-close-white"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="offcanvas-body d-flex justify-content-between align-items-center h-100">
+     <ul class="navbar-nav d-flex justify-content-evenly align-items-center h-50 w-100">
+  <li class="nav-item">
+    <a class="nav-link text-black" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-black" routerLink="/broker" routerLinkActive="active">Broker</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-black" routerLink="/employer" routerLinkActive="active">Employer</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-black" routerLink="/employee" routerLinkActive="active">Employee</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-black" routerLink="/estimate" routerLinkActive="active">Get an Estimate</a>
+  </li>
+</ul>
+
+      <div class="d-flex justify-content-evenly button-section">
+        <button class="nav-buttons">Login</button>
+        <button class="nav-buttons">Home</button>
+        <div class="dropdown">
+    <button
+      class="language-button btn btn-primary dropdown-toggle"
+      id="dropdownMenuButton"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Language
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+      <li><a class="dropdown-item text-white" href="#">English</a></li>
+      <li><a class="dropdown-item text-white" href="#">Español</a></li>
+    </ul>
+  </div>
+      </div>
+    </div>
+  </div>
+</nav>

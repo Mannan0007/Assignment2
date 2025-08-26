@@ -1,0 +1,56 @@
+/* Custom sidebar width */
+.sidebar-custom {
+  width: 80% !important;
+  max-width: 80%; /* optional to enforce on larger screens */
+}
+
+.nav-link{
+     padding: 5px 10px;           /* some space inside */
+  border-radius: 6px;          /* optional rounded corners */
+  /* transition: all 0.2s ease; */
+}
+.nav-link:hover {
+  border: 2px solid #DB6431;     /* black box */
+}
+.main-nav{
+    /* gap: 30px; */
+    justify-content: space-evenly;
+}
+
+.button-section{
+    /* background-color: red; */
+    display: flex;
+    width: 30%;
+    gap: 20px;
+    height: 40px;
+
+}
+.nav-buttons{
+    font-family: Foco,Arial,sans-serif!important;
+    width: 40%;
+    border-radius: 8px;
+    /* border: 1px gray solid; */
+    border: #DB6431;
+}
+.language-button{
+    font-family: Foco,Arial,sans-serif!important;
+    border-radius: 8px;
+    color: white;
+    background-color: #DB6431;
+    border: #DB6431;
+    
+}
+.nav-buttons:hover{
+    border: gray;
+    background-color: #DB6431;
+}
+.dropdown-menu{
+    background-color: #DB6431;
+    color: white;
+
+}
+.nav-link.active {
+  font-weight: bold;
+  color: #f25c2d !important; /* highlight color */
+  border: 2px solid #f25c2d; /* optional underline */
+}

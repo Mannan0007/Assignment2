@@ -1,0 +1,155 @@
+.center-div {
+  background-image: url(/assets/img/Broker-web-2x.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+  font-family: 'Foco', Arial, sans-serif !important;
+  font-weight: 700!important;
+}
+.text-orange {
+  color: #DB6431;
+  /* background-color: red; */
+  text-align:end;
+  width: 98%;
+  font-weight: 700!important;
+  
+}
+.text-main{
+  display: flex;
+  flex-direction: column;
+  /* background-color: black; */
+  width: 90%;
+  height: 50%;
+  justify-content: center;
+  text-align:end;
+  color: white;
+  font-size: 60px;
+  font-weight: 700!important;
+}
+.broker-tagline{
+  /* background-color: green; */
+  text-align:end;
+  font-size: 27px;
+  width: 77%;
+  color: #DB6431;
+  margin-top: -20px;
+  font-weight: 700!important;
+}
+.broker-tagline2{
+  /* backgroun/d-color: red; */
+  width: 55%;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  margin-left: auto;
+  font-weight: 700!important;
+  /* justify-content: end; */
+}
+
+.broker-button{
+  margin-left: auto;
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  /* background-color: rebeccapurple; */
+  margin-top: 30px;
+  height: 45px;
+}
+.broker-button button{
+  font-weight: 700!important;
+  width: 20%;
+  border: 1px solid white;
+  border-radius: 8px;
+  background-color: #DB6431;
+  font-size: 20px;
+}
+.broker-button a{
+  text-decoration: none;
+  color: white;
+
+}
+
+
+
+.center-div2 {
+  background-image: url(/assets/img/Employer-web-2x.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+  font-family: 'Foco', Arial, sans-serif !important;
+  font-weight: 700!important;
+}
+.text-main2{
+  display: flex;
+  flex-direction: column;
+  /* background-color: black; */
+  width: 90%;
+  margin-left: auto;
+  height: 50%;
+  justify-content: center;
+  text-align:start;
+  color: white;
+  font-size: 60px;
+  font-weight: 700!important;
+}
+.text-orange2 {
+  color: #DB6431;
+  /* background-color: red; */
+  text-align:start;
+  width: 99%;
+  margin-left: auto;
+  font-weight: 700!important;
+  
+}
+.broker-tagline22{
+  /* background-color: green; */
+  text-align:start;
+  font-size: 27px;
+  width: 76%;
+  margin-left: auto;
+  color: #DB6431;
+  margin-top: -20px;
+  font-weight: 700!important;
+}
+.broker-tagline3{
+  /* background-color: red; */
+  width: 89%;
+  color: white;
+  text-align: start;
+  font-size: 25px;
+  margin-left: auto;
+  font-weight: 700!important;
+  /* justify-content: end; */
+}
+.employer-button{
+  margin-left: auto;
+  width: 77%;
+  display: flex;
+  justify-content: left;
+  /* background-color: rebeccapurple; */
+  margin-top: 30px;
+  height: 45px;
+}
+.employer-button button{
+  font-weight: 700!important;
+  width: 15%;
+  border: 1px solid white;
+  border-radius: 8px;
+  background-color: #DB6431;
+  font-size: 20px;
+}
+.employer-button a{
+  text-decoration: none;
+  color: white;
+
+}
+
+
+.center-div3 {
+  background-image: url(/assets/img/Employee-web-2x.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+  font-family: 'Foco', Arial, sans-serif !important;
+  font-weight: 700!important;
+}

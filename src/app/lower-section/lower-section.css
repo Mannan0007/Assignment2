@@ -1,0 +1,13 @@
+.main-div{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700 !important;
+    font-family: Poppins, Arial, sans-serif !important;
+    margin: 20px;
+}
+.main-div2{
+    text-align: center;
+}
+.orange-text{
+      color: #DB6431;
+}
