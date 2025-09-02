@@ -4,6 +4,7 @@ import {
   provideZonelessChangeDetection,
 } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';  // ✅ correct import
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
@@ -14,10 +15,12 @@ import { Contact } from './contact/contact';
 import { LowerSection } from './lower-section/lower-section';
 import { BrokerHome } from './broker/broker-home/broker-home';
 import { Example } from './example/example';
+import { Register } from './register/register';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [App, Header, Home, Footer, Contact, LowerSection, BrokerHome, Example],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [App, Header, Home, Footer, Contact, LowerSection, BrokerHome, Example, Register],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),

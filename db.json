@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "id": "4528",
+      "firstName": "Mannan",
+      "lastName": "puri",
+      "email": "mannan@gmail.com",
+      "dob": "2000-12-12",
+      "ssn": "123654789",
+      "userId": "demo1212",
+      "password": "Staging123$",
+      "confirmPassword": "Staging123$"
+    }
+  ]
+}

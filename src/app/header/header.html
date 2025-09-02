@@ -3,17 +3,15 @@
     <img src="/assets/img/logo-main.svg" alt="ACHT Logo" />
   </a>
 
-  <!-- <button
+  <button
     class="navbar-toggler"
     type="button"
     data-bs-toggle="offcanvas"
-    data-bs-target="#navbarNav"
-    
+    data-bs-target="#mobileMenu"
     aria-expanded="false"
-    
   >
     <span class="navbar-toggler-icon"></span>
-  </button> -->
+  </button>
 
   <!-- Navbar links -->
   <div
@@ -23,7 +21,7 @@
     id="navbarNav"
   >
     <!-- Left side links -->
-    <!-- <div class="offcanvas-header">
+    <div class="offcanvas-header side-bar-mb">
       <h5 class="offcanvas-title" id="sidebarLabel">Menu</h5>
       <button
         type="button"
@@ -31,44 +29,93 @@
         data-bs-dismiss="offcanvas"
         aria-label="Close"
       ></button>
-    </div> -->
+    </div>
     <div class="offcanvas-body d-flex justify-content-between align-items-center h-100">
-     <ul class="navbar-nav d-flex justify-content-evenly align-items-center h-50 w-100">
-  <li class="nav-item">
-    <a class="nav-link text-black" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link text-black" routerLink="/broker" routerLinkActive="active">Broker</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link text-black" routerLink="/employer" routerLinkActive="active">Employer</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link text-black" routerLink="/employee" routerLinkActive="active">Employee</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link text-black" routerLink="/estimate" routerLinkActive="active">Get an Estimate</a>
-  </li>
-</ul>
+      <ul class="navbar-nav d-flex justify-content-evenly align-items-center h-50 w-100">
+        <li class="nav-item">
+          <a
+            class="nav-link text-black"
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-black" routerLink="/broker" routerLinkActive="active">Broker</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-black" routerLink="/employer" routerLinkActive="active"
+            >Employer</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-black" routerLink="/employee" routerLinkActive="active"
+            >Employee</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-black" routerLink="/estimate" routerLinkActive="active"
+            >Get an Estimate</a
+          >
+        </li>
+      </ul>
 
       <div class="d-flex justify-content-evenly button-section">
         <button class="nav-buttons">Login</button>
         <button class="nav-buttons">Home</button>
         <div class="dropdown">
-    <button
-      class="language-button btn dropdown-toggle"
-      id="dropdownMenuButton"
-      data-bs-toggle="dropdown"
-      aria-expanded="false"
-    >
-      Language
-    </button>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-      <li><a class="dropdown-item text-white" href="#">English</a></li>
-      <li><a class="dropdown-item text-white" href="#">Español</a></li>
-    </ul>
-  </div>
+          <button
+            class="language-button btn dropdown-toggle"
+            id="dropdownMenuButton"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Language
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item text-white" href="#">English</a></li>
+            <li><a class="dropdown-item text-white" href="#">Español</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
+
+
+
+    <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-end d-lg-none bg-light text-black" tabindex="-1" id="mobileMenu">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Menu</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+
+    <div class="offcanvas-body d-flex flex-column justify-content-between">
+      <!-- Nav Links -->
+      <ul class="navbar-nav text-start">
+        <li class="nav-item"><a class="nav-link text-black" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-black" href="/broker">Broker</a></li>
+        <li class="nav-item"><a class="nav-link text-black" href="/employer">Employer</a></li>
+        <li class="nav-item"><a class="nav-link text-black" href="/employee">Employee</a></li>
+        <!-- <li class="nav-item"><a class="nav-link text-black" href="/estimate">Get an Estimate</a></li> -->
+      </ul>
+
+      <!-- Buttons -->
+      <div class="d-flex flex-column gap-2 mt-3">
+        <button class="btn btn-orange w-100">Login</button>
+        <div class="dropdown">
+          <button class="btn btn-orange dropdown-toggle w-100" data-bs-toggle="dropdown">
+            Language
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">English</a></li>
+            <li><a class="dropdown-item" href="#">Español</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
 </nav>

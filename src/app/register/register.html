@@ -1,0 +1,191 @@
+<div class="d-flex main-div">
+  <div class="reg-forms">
+    <div class="button-header">
+      <a href="">←Back</a>
+      <!-- <button>Back</button> -->
+      <button><span class="blue">Register</span> as Employer</button>
+    </div>
+    <h1 id="heading-main"><span class="text-black">Create</span> Employee Account</h1>
+    <h4 id="message">Fields marked with *are required.</h4>
+
+
+    <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+    <div class="registeration-form">
+
+    <!-- Account Information -->
+    <h3 id="heading-account">Account Information</h3>
+    <div class="inputs">
+      <div>
+        <label>First name</label>
+        <input type="text" name="firstName" [(ngModel)]="user.firstName" required />
+      </div>
+      <div>
+        <label>Last name</label>
+        <input type="text" name="lastName" [(ngModel)]="user.lastName" required />
+      </div>
+    </div>
+
+    <div class="email-section">
+      <label>Email address</label>
+      <input type="email" name="email" [(ngModel)]="user.email" required />
+    </div>
+
+    <div class="inputs">
+      <div>
+        <label>Date of birth</label>
+        <input type="date" name="dob" [(ngModel)]="user.dob" placeholder="MM/DD/YYYY" />
+      </div>
+      <div>
+        <label>SSN</label>
+        <input type="text" name="ssn" [(ngModel)]="user.ssn" />
+      </div>
+    </div>
+
+    <div class="email-section">
+      <label>User ID</label>
+      <input type="text" name="userId" [(ngModel)]="user.userId" />
+    </div>
+
+    <div class="email-section">
+      <label>Password</label>
+      <input type="password" name="password" [(ngModel)]="user.password" />
+    </div>
+
+    <div class="email-section">
+      <label>Confirm password</label>
+      <input type="password" name="confirmPassword" [(ngModel)]="user.confirmPassword" />
+    </div>
+      <!-- </form> -->
+    </div>
+
+    <div class="registeration-form2">
+      <!-- <h1> </h1> -->
+      <!-- <form action=""> -->
+        <h3 id="heading-account">Security Questions</h3>
+        <p id="question-heading">
+          Please select 4 different questions and answers. You will be asked these questions if you
+          forget your login information.
+        </p>
+
+        <div class="question-section">
+          <label for="">Question 1</label>
+          <select id="question1" name="question1">
+            <option value="" disabled selected>Select a question from drop-down menu</option>
+            <option value="bones">How many bones have you broken?</option>
+            <option value="first-job-city">In what city or town was your first job?</option>
+            <option value="childhood-friend">
+              What is the name of your favorite childhood friend?
+            </option>
+            <option value="street-number">
+              What is the street number of the house you grew up in?
+            </option>
+            <option value="favorite-sport">What is your favorite sport?</option>
+            <option value="first-car-color">What was the color of your first car?</option>
+            <option value="first-car-make">What was the make and model of your first car?</option>
+            <option value="first-pet">What was the name of your first pet?</option>
+            <option value="dream-job">What was your dream job as a child?</option>
+            <option value="highschool-mascot">What was your high school mascot?</option>
+          </select>
+          <label for="">Answer to Question 1</label>
+          <input type="text" name="" id="" />
+        </div>
+
+        <div class="question-section">
+          <label for="">Question 2</label>
+          <select id="question1" name="question1">
+            <option value="" disabled selected>Select a question from drop-down menu</option>
+            <option value="bones">How many bones have you broken?</option>
+            <option value="first-job-city">In what city or town was your first job?</option>
+            <option value="childhood-friend">
+              What is the name of your favorite childhood friend?
+            </option>
+            <option value="street-number">
+              What is the street number of the house you grew up in?
+            </option>
+            <option value="favorite-sport">What is your favorite sport?</option>
+            <option value="first-car-color">What was the color of your first car?</option>
+            <option value="first-car-make">What was the make and model of your first car?</option>
+            <option value="first-pet">What was the name of your first pet?</option>
+            <option value="dream-job">What was your dream job as a child?</option>
+            <option value="highschool-mascot">What was your high school mascot?</option>
+          </select>
+          <label for="">Answer to Question 2</label>
+          <input type="text" name="" id="" />
+        </div>
+
+        <div class="question-section">
+          <label for="">Question 3</label>
+          <select id="question1" name="question1">
+            <option value="" disabled selected>Select a question from dropdown menu</option>
+            <option value="bones">How many bones have you broken?</option>
+            <option value="first-job-city">In what city or town was your first job?</option>
+            <option value="childhood-friend">
+              What is the name of your favorite childhood friend?
+            </option>
+            <option value="street-number">
+              What is the street number of the house you grew up in?
+            </option>
+            <option value="favorite-sport">What is your favorite sport?</option>
+            <option value="first-car-color">What was the color of your first car?</option>
+            <option value="first-car-make">What was the make and model of your first car?</option>
+            <option value="first-pet">What was the name of your first pet?</option>
+            <option value="dream-job">What was your dream job as a child?</option>
+            <option value="highschool-mascot">What was your high school mascot?</option>
+          </select>
+          <label for="">Answer to Question 3</label>
+          <input type="text" name="" id="" />
+        </div>
+
+        <div class="question-section">
+          <label for="">Question 4</label>
+          <select id="question1" name="question1">
+            <option value="bones">How many bones have you broken?</option>
+            <option value="first-job-city">In what city or town was your first job?</option>
+            <option value="childhood-friend">
+              What is the name of your favorite childhood friend?
+            </option>
+            <option value="street-number">
+              What is the street number of the house you grew up in?
+            </option>
+            <option value="favorite-sport">What is your favorite sport?</option>
+            <option value="first-car-color">What was the color of your first car?</option>
+            <option value="first-car-make">What was the make and model of your first car?</option>
+            <option value="first-pet">What was the name of your first pet?</option>
+            <option value="dream-job">What was your dream job as a child?</option>
+            <option value="highschool-mascot">What was your high school mascot?</option>
+          </select>
+          <label for="">Answer to Question 4</label>
+          <input type="text" name="" id="" />
+        </div>
+   
+    </div>
+
+    <div class="registeration-form2">
+      <h3 id="heading-account">Security Image</h3>
+      
+    </div>
+
+    <div class="registeration-form2">
+      <h3 id="heading-account">User Acceptance Agreement</h3>
+      <div class="d-flex user-agreement" >
+          <input type="checkbox"  />
+          <label for=""
+            >Yes, I accept the User Acceptance Agreement which specifies how my information will be kept
+            confidential and secure. To view the User Acceptance Agreement, click the link above</label
+          >
+      </div>
+
+    </div>
+
+    <div class="bottom-buttons">
+        <button id="back">Back</button>
+      <button type="submit" id="create-account">Create Account</button>
+    </div>
+
+       </form>
+  </div>
+
+  <div class="reg-pic">
+    <h1></h1>
+  </div>
+</div>

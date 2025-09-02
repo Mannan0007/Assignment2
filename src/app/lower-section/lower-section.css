@@ -3,10 +3,11 @@
     font-size: 40px;
     font-weight: 700 !important;
     font-family: Poppins, Arial, sans-serif !important;
-    margin: 20px;
+    margin: 40px;
 }
 .main-div2{
     text-align: center;
+    margin: 40px;
     font-size: 20px;
         font-family: Poppins, Arial, sans-serif !important;
             font-weight: 600;
@@ -14,4 +15,38 @@
 }
 .orange-text{
       color: #DB6431;
+}
+
+
+@media screen and (max-width:480px) {
+   #main-text{
+       font-size: 30px;
+       
+    }
+    .main-div{
+        justify-content: center;
+    }
+    .main-div2{
+        font-size: 22px;
+        margin-left: 20px;
+        text-align: start;
+        font-weight: 100;
+        line-height: 25px;
+
+
+    }
+    #foripad{
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width:1024px) {
+    
+    .main-div2{
+        margin-top: 21px;
+        font-size: 24px;
+    }
+    #foripad{
+        display: none;
+    }
 }

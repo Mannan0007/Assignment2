@@ -38,6 +38,9 @@
 .orange-text {
   color: #db6431;
 }
+.mob-link{
+  display: none;
+}
 
 .broker-links {
   display: flex;
@@ -239,10 +242,14 @@
 }
 
 .arrow {
-  transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
   font-size: 20px;
   position: relative;
   left: -20pc;
+
+  /* background-color: #007bff; */
+  /* padding: 2px 6px; optional, for spacing inside */
+  /* border-radius: 4px; optional style */
   /* text-align: start;  */
 }
 
@@ -329,4 +336,468 @@
     font-family: DM Sans, Arial, sans-serif;
     color: #007bff;
   font-size: 14px;
+}
+
+
+.mob-hex{
+display: none;
+}
+#foripad{
+  display: none;
+}
+
+@media screen and (max-width:480px) {
+  .main-div {
+  background-image: url('/assets/img/broker-mbl.webp'),url('/assets/img/mbl-background.png');
+    background-repeat: no-repeat, no-repeat;
+    background-size: 90% , cover;
+      background-position: 50% 50%; 
+      /* height: 100%; */
+
+}
+.center-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  /* background-color: red; */
+  height: 95%;
+}
+.center-text h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 44px;
+
+}
+.headings {
+  display: flex;
+  flex-direction: column;
+  /* background-color: #007bff; */
+  text-align: center;
+  /* margin-bottom: ; */
+
+}
+.center-text h5{
+  margin-top: 0px;
+}
+
+.login-for-broker{
+  /* background-color: #007bff; */
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+.login-for-broker h5{
+  text-align: start;
+}
+
+.mob-link{
+  display: flex;
+  color: #db6431;
+}
+.broker-links a {
+  display: none;
+}
+.broker-links {
+  /* background-color: darkblue; */
+  justify-content: center;
+  width: 100%;
+}
+
+.login-button {
+  color: #fff;
+  width: 40%;
+  border: white;
+  border-radius: 10px;
+  height: 42px;
+  background-color: #db6431;
+  font-size: 18px;
+  font-family: Foco, Arial, sans-serif !important;
+}
+.mob-hex{
+  display: flex;
+  /* background-color: green; */
+}
+
+
+
+
+
+/* Example background colors/images */
+.hex-card-orange2 {
+  background:  url(/assets/img/orange-background.svg) no-repeat center/cover;
+}
+
+.hex-card-blue2 {
+  background:  url(/assets/img/blue-background.svg) no-repeat center/cover;
+}
+
+
+
+.logos-broker2 {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto 10px;
+}
+
+.features-heading {
+        font-size: 19px;
+    font-weight: 700;
+  /* font-size: 18px; */
+  /* font-weight: bold; */
+  margin-bottom: 8px;
+  color: #fd7e14;;
+}
+
+.hexa-content {
+    font-family: DM Sans, Arial, sans-serif;
+    color: #fd7e14;;
+  font-size: 16px;
+}
+
+.features-heading-blue {
+        font-size: 19px;
+    font-weight: 700; 
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #007bff;
+}
+
+.hexa-content-blue {
+    font-family: DM Sans, Arial, sans-serif;
+    color: #007bff;
+  font-size: 14px;
+}
+
+
+.hex-container{
+  display: none;
+}
+
+
+
+  .hex-container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: #007bff; */
+  width: 100%;
+  /* gap: 2rem; */
+}
+
+.hex-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px
+}
+
+.hex-row.single {
+  justify-content: center; /* center single hexagon */
+}
+
+/* Example hexagon styling (you may already have this) */
+.hex-card2 {
+  width: 220px;
+  height: 250px;
+  /* clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  /* font-size: 12px; */
+}
+
+
+
+
+
+.hex-card-orange2 {
+  /* font-size: 12px; */
+  background: url(/assets/img/orange-background.svg) no-repeat;
+  background-size: contain;   /* makes image smaller but keeps aspect ratio */
+  background-position: center; /* adjust to move inside the div */
+  width: 180px;   /* control actual container size */
+  height: 250px;  /* tweak until it fits well */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hex-card-blue2 {
+  background: url(/assets/img/blue-background.svg) no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 180px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hexa-content{
+  font-size: 10px;
+}
+.hexa-content-blue2{
+  font-size: 10px;
+  color: #007bff;
+}
+
+
+.broker-conditions{
+  /* background-color: gray; */
+  display: flex;
+  width: 100%;
+  margin: 0;
+  flex-direction: column;
+}
+.broker-left{
+  text-align: center;
+  font-size: 20px;
+}
+#formob{
+  display: none;
+}
+#broker-img{
+  height: 200px;
+}
+.grid-container{
+  display: flex;
+  flex-direction: column;
+  /* background-color: green; */
+  height: 100%;
+  width: 100%;
+}
+.grid-item{
+  /* background-color: red; */
+  width: 100%;
+}
+.support-resouce{
+  display: none;
+}
+/* #start-button{
+  display: none;
+} */
+
+#broker-head{
+  margin-top: 10px;
+  font-size: 42px;
+}
+.dropdowns{
+  /* background-color: red; */
+}
+.dropdown-header{
+  width: 100%;
+  font-size: 14px;
+}
+.dropdown-body{
+  /* background-color: red; */
+  width: 80%;
+}
+#specialcase{
+  font-size: 10px;
+  /* background-color: red; */
+  /* width: 60%; */
+}
+
+
+#lines{
+  width: 85%;
+}
+#foripad{
+  display: none;
+}
+.dropdown-header{
+  /* background-color: palegoldenrod; */
+  display: flex;
+    justify-content: space-between; /* pushes text left, arrow right */
+ align-items: center; /* vertical alignment */
+  padding: 8px 12px; /* optional spacing */
+  cursor: pointer;
+}
+/* .arrow{ */
+    /* transition: transform 0.3s ease; */
+  /* font-size: 20px; */
+  /* background-color: #007bff; */
+  /* text-align: end; */
+/* } */
+.arrow {
+    transition: transform 0.3s ease;
+  font-size: 20px;
+  position: relative;
+  left: 5px;
+
+  /* background-color: #007bff; */
+  /* padding: 2px 6px; optional, for spacing inside */
+  /* border-radius: 4px; optional style */
+  /* text-align: start;  */
+}
+}
+
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  /* Tablet & iPad styles */
+.main-div{
+  height: 100%;
+  width: 100%;
+      background-size: cover;
+
+}
+.center-text h5{
+
+  /* background-color: red; */
+  font-size: 21px;
+  /* margin-bottom: 6%; */
+}
+#foripad{
+  display: flex;
+}
+#formob{
+  display: none;
+}
+
+
+
+
+
+
+.features-heading {
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 0px;
+  color: #fd7e14;;
+}
+.hexa-content {
+  font-family: DM Sans, Arial, sans-serif;
+  color: #fd7e14;;
+  font-size: 14px;
+}
+.hex-container {
+  display: flex;
+  justify-content: space-between;  /* spread evenly */
+  align-items: center;
+  gap: 12px;                        /* space between cards */
+  padding: 5px;
+  /* background-color: #007bff; */
+}
+.hex-card {
+  width: 145px;                 /* keep them same size */
+  height: 310px;    
+  flex: 0 0 auto;   /* don't grow or shrink in flexbox */
+  /* fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background-size: contain;         /* fit hex shape */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+.hexa-content {
+    font-family: DM Sans, Arial, sans-serif;
+    color: #fd7e14;;
+    font-size: 12px;
+  }
+
+  .features-heading-blue {
+        font-size: 12px;
+    font-weight: 700; 
+  font-weight: bold;
+  margin-bottom: 0px;
+  color: #007bff;
+}
+
+.hexa-content-blue {
+    font-family: DM Sans, Arial, sans-serif;
+    color: #007bff;
+  font-size: 12px;
+}
+
+
+
+
+
+
+.logos-broker{
+  height: 30px;
+  width: 30px;
+  margin: 0;
+}
+.broker-conditions{
+  margin: 5px;
+  /* background-color: red; */
+  gap: 1%;
+}
+.broker-left{
+  /* background-color: #007bff; */
+  /* width: 40%; */
+  
+}
+#broker-img {
+  height: 160px;
+}
+.grid-container {
+  gap: 10px;
+  /* width: 610px; */
+  width: 100%;
+  /* height: 690px; */
+  height: 100%;
+  
+  /* background-color: red; */
+  /* border: 1px solid; */
+}
+.support-resouce {
+  margin-top: 0px;
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 6px;
+  padding: 20px;
+  line-height: 25px;
+  font-family: Poppins, Arial, sans-serif !important;
+  /* font-size: 24px; */
+  /* background-color: red; */
+}
+.spr{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.for-mobile{
+  /* background-color: red; */
+}
+.dropdowns{
+  /* background-color: gray; */
+}
+.dropdown-header{
+  /* background-color: palegoldenrod; */
+  display: flex;
+    justify-content: space-between; /* pushes text left, arrow right */
+ align-items: center; /* vertical alignment */
+  padding: 8px 12px; /* optional spacing */
+  cursor: pointer;
+}
+.arrow {
+    transition: transform 0.3s ease;
+  font-size: 20px;
+  position: relative;
+  left: -9pc;
+
+  /* background-color: #007bff; */
+  /* padding: 2px 6px; optional, for spacing inside */
+  /* border-radius: 4px; optional style */
+  /* text-align: start;  */
+}
 }

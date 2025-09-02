@@ -12,3 +12,35 @@
 .main-div a{
     color: black;
 }
+.mob{
+    display: flex;
+    gap: 100px;
+    /* justify-content: space-around; */
+    /* display: none; */
+}
+
+
+@media screen and (max-width:480px) {
+    .main-div{
+        display: flex;
+    }
+    .desk{
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+    .mob{
+        display: flex;
+        gap: 10px;
+        width: 100%;
+    }
+    .numbers{
+        width: 100%;
+        /* background-color: red; */
+    }
+    .links{
+        width: 20%;
+        /* background-color: gray; */
+    }
+    
+}

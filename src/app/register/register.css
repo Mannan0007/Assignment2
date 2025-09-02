@@ -1,0 +1,227 @@
+.main-div {
+  /* justify-content: space-around; */
+  /* background-color: aquamarine; */
+  margin-top: 2%;
+  gap: 5%;
+  margin-left: 2%;
+   height: 100vh;          /* make it full viewport height */
+  overflow: hidden; 
+}
+.reg-pic {
+  background-image: url(/assets/img/register.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  width: 50%;
+  /* border-radius: 19px; */
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+.reg-forms {
+    /* display: flex;
+    flex-direction: column;
+    gap: 3%; */
+  /* background-color: red; */
+  width: 50%;
+    overflow-y: auto;    /* enables vertical scroll inside */
+  overflow-x: hidden; 
+  /* padding: 2%; */
+  /* text-align: center; */
+}
+#message {
+  /* background-color: #254074; */
+  text-align: end;
+  font-size: 14px;
+  font-family: foco, sans-serif;
+}
+.button-header {
+  /* background-color: beige; */
+  height: 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.button-header button{
+        margin: 0;
+    font-size: 22px;
+    line-height: inherit;
+        color: #f15d22;
+        font-weight: 700;
+        background-color: transparent;
+        border-radius: 12px;
+    font-family: Roboto, sans-serif;
+}
+.button-header a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #254074;
+    line-height: 20px;
+    font-family: Roboto, sans-serif;
+    letter-spacing: 0.0178571em;
+    font-weight: 600;
+}
+.blue{
+    color: #254074;
+    
+}
+.registeration-form {
+ 
+  /* background-color: yellow; */
+  text-align: start;
+  border: solid #f15d22 2px;
+  border-radius: 10px;
+  /* width: 90%; */
+  /* height: 100%; */
+  padding: 10px;
+   max-height: 100vh;   /* restricts height to viewport */
+}
+.registeration-form form {
+  display: flex;
+  flex-direction: column;
+}
+.labels {
+
+  /* background-color: white; */
+  justify-content: space-evenly;
+}
+#heading-main {
+  color: #f15d22;
+  font-weight: 800;
+  font-size: 48px;
+  margin-bottom: 15px;
+  font-family: foco, sans-serif;
+  line-height: 45px;
+}
+#heading-account {
+  /* background-color: aqua; */
+  width: 90%;
+  margin-left: auto;
+  line-height: 24px;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  color: #254074;
+  font-size: 24px;
+  /* color: #f15d22; */
+}
+.inputs {
+  display: flex;
+  /* background-color:    green; */
+  width: 88%;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+  height: 90px;
+  /* align-items: center; */
+}
+.inputs input {
+  border-radius: 10px;
+  border: 1px solid gray;
+  width: 100%;
+  height: 40px;
+  /* height: 50%; */
+}
+label {
+    color: #254074;
+font-weight: 500;
+      /* font-size: 14px; */
+  /* background-color: /orange; */
+}
+.email-section {
+  display: flex;
+  flex-direction: column;
+  width: 83%;
+  margin-left: auto;
+  margin-right: auto;
+  /* height: 40%; */
+  /* background-color: red; */
+  height: 90px;
+}
+.email-section input {
+  border-radius: 10px;
+  height: 40px;
+  border: 1px solid gray;
+}
+#small-labels {
+  width: 83%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 12px;
+  font-weight: 400;
+  /* background-color: #254074; */
+}
+.question-section {
+  display: flex;
+  flex-direction: column;
+  width: 83%;
+  margin-left: auto;
+  margin-right: auto;
+  /* background-color: red; */
+  padding: 10px;
+  height: 190px;
+  /* margin: 10px; */
+}
+.question-section select{
+   
+    color: #777;
+    /* background-color: #254074; */
+    margin-bottom: 10px;
+    height: 50px;
+    /* height: 180px; */
+}
+.question-section input {
+  border-radius: 10px;
+  height: 40px;
+  border: 1px solid gray;
+}
+#question-heading{
+    margin-left: auto;
+    width: 91%;
+    font-weight: 500;
+    /* background-color: red; */
+    font-size: 14px;
+    text-align: start;
+}
+.registeration-form2 {
+ margin-top: 3%;
+  /* background-color: yellow; */
+  text-align: start;
+  border: solid #f15d22 2px;
+  border-radius: 5px;
+  /* width: 90%; */
+  /* height: 100%; */
+  padding: 10px;
+   /* max-height: 100vh; */
+}
+.registeration-form2 form {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-agreement{
+    gap: 10px;
+    font-size: 15px;
+}
+.user-agreement label{
+    color: #6b7280;
+
+}
+.bottom-buttons{
+    display: flex;
+    margin-top: 3%;
+    justify-content: space-between;
+    /* background-color:red; */
+    height: 40px;
+}
+#back{
+    background-color: transparent;
+    width: 20%;
+    border-radius: 5px;
+    color: #254074;
+}
+#create-account{
+    border: none;
+    width: 75%;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #f15d22
+}
