@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light px-3 text-black">
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-3 text-black main-div">
   <a class="navbar-brand" href="#">
     <img src="/assets/img/logo-main.svg" alt="ACHT Logo" />
   </a>
@@ -38,24 +38,43 @@
             routerLink="/"
             routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }"
+            *ngIf="router.url !== '/register-employer' && router.url !== '/register'"
             >Home</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link text-black" routerLink="/broker" routerLinkActive="active">Broker</a>
+          <a
+            class="nav-link text-black"
+            routerLink="/broker"
+            routerLinkActive="active"
+            *ngIf="router.url !== '/register-employer' && router.url !== '/register'"
+            >Broker</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link text-black" routerLink="/employer" routerLinkActive="active"
+          <a
+            class="nav-link text-black"
+            routerLink="/employer"
+            routerLinkActive="active"
+            *ngIf="router.url !== '/register-employer' && router.url !== '/register'"
             >Employer</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link text-black" routerLink="/employee" routerLinkActive="active"
+          <a
+            class="nav-link text-black"
+            routerLink="/employee"
+            routerLinkActive="active"
+            *ngIf="router.url !== '/register-employer' && router.url !== '/register'"
             >Employee</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link text-black" routerLink="/estimate" routerLinkActive="active"
+          <a
+            class="nav-link text-black"
+            routerLink="/estimate"
+            routerLinkActive="active"
+            *ngIf="router.url !== '/register-employer' && router.url !== '/register'"
             >Get an Estimate</a
           >
         </li>
@@ -82,9 +101,7 @@
     </div>
   </div>
 
-
-
-    <!-- Mobile Offcanvas Menu -->
+  <!-- Mobile Offcanvas Menu -->
   <div class="offcanvas offcanvas-end d-lg-none bg-light text-black" tabindex="-1" id="mobileMenu">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title">Menu</h5>
@@ -116,6 +133,4 @@
       </div>
     </div>
   </div>
-
-  
 </nav>

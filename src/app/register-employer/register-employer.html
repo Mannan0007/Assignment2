@@ -2,195 +2,192 @@
   <div class="reg-forms">
     <div class="insiders">
       <div class="button-header">
-        <a href="" id="back">
-          <img src="/assets/img/back 2x.png" alt="" height="15" />
+<a href="" id="back">
+          <img src="/assets/img/back 2x.png" alt=""  height="15"/>
           Back</a
-        >
-        <button routerLink="/register-employer">
-          <span class="blue">Register</span> as Employer
-        </button>
+        >        <button routerLink="/register"><span class="blue">Register</span> as Employee</button>
       </div>
-      <h1 id="heading-main"><span class="blue">Create</span> Employee Account</h1>
+      <h1 id="heading-main"><span class="blue">Create</span> Employer Account</h1>
       <h4 id="message">Fields marked with <span class="errors">*</span> are required.</h4>
 
-      <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)" novalidate>
+      <form #employerForm="ngForm" (ngSubmit)="onSubmit(employerForm)" novalidate>
         <div class="registeration-form">
           <!-- Account Information -->
-          <h3 id="heading-account">Account Information</h3>
+          <h3 id="heading-account">Company Information</h3>
+
+          <div class="email-section">
+            <label>Company Name<span class="required">*</span></label>
+            <input
+              type="text"
+              name="companyName"
+              [(ngModel)]="employer.companyName"
+              required
+              #companyName="ngModel"
+              placeholder="Company name"
+              id="input-inside"
+            />
+            <div *ngIf="employerForm.submitted && companyName.invalid" class="error">
+              Company Name is required
+            </div>
+          </div>
+
+          <div class="email-section">
+            <label>Company Type <span class="required">*</span></label>
+            <select
+              name="companyType"
+              [(ngModel)]="employer.companyType"
+              required
+              #companyType="ngModel"
+              id="select-type"
+            >
+              <option value="" disabled selected>Select</option>
+              <option value="type1">Sole Proprietorship</option>
+              <option value="type2">General Partnership</option>
+              <option value="type3">Limited Partnership</option>
+              <option value="type4">Limited Liability Partnership</option>
+              <option value="type5">Limited Liability Company</option>
+              <option value="type6">C Corporation</option>
+              <option value="type7">S Corporation</option>
+              <option value="type8">Benefit Corporation</option>
+              <option value="type9">Nonprofit Corporation</option>
+              <option value="type10">Cooperative</option>
+              <option value="type11">Professional Corporation</option>
+              <option value="type12">Professional Limited Liability Company</option>
+            </select>
+            <div *ngIf="employerForm.submitted && companyType.invalid" class="error">
+              Company type is required
+            </div>
+          </div>
+
+        <div class="tin-section" style="position: relative;">
+  <label>TIN/EIN<span class="required">*</span></label>
+  <input
+    [type]="showTIN ? 'text' : 'password'"
+    name="tin"
+    [(ngModel)]="employer.tin"
+    required
+    #tin="ngModel"
+    maxlength="10"
+    id="input-inside"
+    (input)="formatTIN($event)"
+  />
+
+  <!-- 👁 Toggle Icon -->
+  <img
+    [src]="showTIN ? '/assets/img/closedEye.png' : '/assets/img/eye.png'"
+    (click)="toggleTIN()"
+    alt="Toggle TIN"
+    style="position: absolute; right: 10px; top: 55%; transform: translateY(-50%); width: 24px; height: 18px; cursor: pointer;"
+  />
+
+  <div *ngIf="employerForm.submitted && tin.errors" class="error">
+    <span *ngIf="tin.errors['required']">TIN is required</span>
+    <span *ngIf="tin.errors['pattern']">Invalid TIN</span>
+  </div>
+</div>
+
+          <h3 id="heading-account2">Business Main Point of Contact</h3>
+
           <div class="inputs">
             <div>
               <label>First name<span class="required">*</span></label>
               <input
                 type="text"
                 name="firstName"
-                [(ngModel)]="user.firstName"
+                [(ngModel)]="employer.firstName"
                 required
-                placeholder="First Name"
                 #firstName="ngModel"
               />
-              <div
-                *ngIf="registerForm.submitted && firstName.invalid"
-                style="color: red; font-size: 13px"
-              >
-                A first name is required
+              <div *ngIf="employerForm.submitted && firstName.invalid" class="error">
+                First name is required
               </div>
             </div>
             <div>
-              <label>Last name<span class="required">*</span></label>
+              <label>Last Name <span class="required">*</span></label>
               <input
                 type="text"
                 name="lastName"
-                [(ngModel)]="user.lastName"
+                [(ngModel)]="employer.lastName"
                 required
-                placeholder="Last Name"
                 #lastName="ngModel"
               />
-              <div
-                *ngIf="registerForm.submitted && lastName.invalid"
-                style="color: red; font-size: 13px"
-              >
-                A last name is required
+              <div *ngIf="employerForm.submitted && lastName.invalid" class="error">
+                Last name is required
               </div>
             </div>
           </div>
 
-          <div class="email-section">
-            <label>Email address<span class="required">*</span></label>
+          <div class="email-section2">
+            <label>Email Address<span class="required">*</span></label>
             <input
               type="email"
               name="email"
-              [(ngModel)]="user.email"
+              [(ngModel)]="employer.email"
               required
-              placeholder="Email Address"
+              email
               #email="ngModel"
+              id="email-input"
             />
-            <div
-              *ngIf="registerForm.submitted && email.invalid"
-              style="color: red; font-size: 13px"
-            >
-              Valid Email is required
+            <div *ngIf="employerForm.submitted && email.invalid" class="error">
+              Enter a valid email
             </div>
           </div>
 
-          <div class="dates-inputs">
-            <div class="d-flex flex-column enterpassword">
-              <label>Date of birth<span class="required">*</span></label>
-              <input
-                type="date"
-                name="dob"
-                [(ngModel)]="user.dob"
-                placeholder="MM/DD/YYYY"
-                required
-                #dob="ngModel"
-              />
-              <!-- <div *ngIf="registerForm.submitted && dob.invalid" style="color: red; font-size: 13px">
-              Date of Birth is required
-            </div> -->
-            </div>
-            <div class="d-flex flex-column renter">
-              <label>SSN <span class="required">*</span></label>
-              <div style="position: relative; width: 100%">
-                <input
-                  [type]="showSSN ? 'text' : 'password'"
-                  name="ssn"
-                  [(ngModel)]="user.ssn"
-                  required
-                  placeholder="SSN"
-                  maxlength="11"
-                  pattern="^\d{3}-\d{2}-\d{4}$"
-                  #ssn="ngModel"
-                  (input)="formatSSN($event)"
-                  style="width: 100%; padding-right: 40px"
-                />
+          <!-- </form> -->
+        </div>
+        <div class="registeration-form2">
+          <!-- Account Information -->
+          <h3 id="heading-account3">Account Information</h3>
 
-                <!-- Eye Icon -->
-                <img
-                  [src]="showSSN ? '/assets/img/closedEye.png' : '/assets/img/eye.png'"
-                  (click)="toggleSSN()"
-                  alt="Toggle SSN"
-                  style="
-                    position: absolute;
-                    right: 10px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    width: 29px;
-                    height: 18px;
-                    cursor: pointer;
-                  "
-                />
-              </div>
-
-              <!-- Error messages -->
-              <div
-                *ngIf="registerForm.submitted && ssn.errors"
-                style="color: red; font-size: 13px; margin-top: 4px"
-              >
-                <span *ngIf="ssn.errors['required']">A valid SSN is required</span>
-                <span *ngIf="ssn.errors['pattern']">SSN must be exactly 9 digits</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="email-section">
+          <div class="user-section">
             <label>User ID<span class="required">*</span></label>
             <input
               type="text"
               name="userId"
-              [(ngModel)]="user.userId"
+              [(ngModel)]="employer.userId"
               required
-              placeholder="User ID"
               #userId="ngModel"
             />
-            <div
-              *ngIf="registerForm.submitted && userId.invalid"
-              style="color: red; font-size: 13px"
-            >
-              User ID can not be empty.
+            <p id="small-text">5 to 15 letters and/or numbers</p>
+            <div *ngIf="employerForm.submitted && userId.invalid" class="error">
+              User ID must be between 5 to 15 characters
             </div>
           </div>
 
-          <div class="email-section">
-            <label>Password<span class="required">*</span></label>
-            <input
-              type="password"
-              name="password"
-              [(ngModel)]="user.password"
-              required
-              minlength="6"
-              placeholder="Password"
-              #password="ngModel"
-            />
-            <div
-              *ngIf="registerForm.submitted && password.invalid"
-              style="color: red; font-size: 13px"
-            >
-              Password must be at least 6 characters
+          <div class="creds-inputs">
+            <div class="d-flex flex-column enterpassword">
+              <label>Password<span class="required">*</span></label>
+              <input
+                type="password"
+                name="password"
+                [(ngModel)]="employer.password"
+                required
+                minlength="6"
+                #password="ngModel"
+              />
+              <div *ngIf="employerForm.submitted && password.invalid" class="error">
+                Password is required (min 6 chars)
+              </div>
+            </div>
+            <div class="d-flex flex-column renter">
+              <label>Re-enter password<span class="required">*</span></label>
+              <input
+                type="password"
+                name="confirmPassword"
+                [(ngModel)]="employer.confirmPassword"
+                required
+                #confirmPassword="ngModel"
+                id="Re-enter"
+              />
+              <div
+                *ngIf="employerForm.submitted && employer.confirmPassword !== employer.password"
+                class="error"
+              >
+                Passwords do not match
+              </div>
             </div>
           </div>
 
-          <div class="email-section">
-            <label>Re-Enter password<span class="required">*</span></label>
-            <input
-              type="password"
-              name="confirmPassword"
-              [(ngModel)]="user.confirmPassword"
-              required
-              placeholder="Re-Enter Password"
-              #confirmPassword="ngModel"
-            />
-            <div
-              *ngIf="registerForm.submitted && confirmPassword.invalid"
-              style="color: red; font-size: 13px"
-            >
-              Confirm Password is required
-            </div>
-            <div
-              *ngIf="registerForm.submitted && user.password !== user.confirmPassword"
-              style="color: red; font-size: 13px"
-            >
-              Passwords do not match
-            </div>
-          </div>
           <!-- </form> -->
         </div>
 
@@ -209,7 +206,7 @@
               <select
                 id="question1"
                 name="question1"
-                [(ngModel)]="user.question1"
+                [(ngModel)]="employer.question1"
                 #question1="ngModel"
                 required
               >
@@ -231,8 +228,8 @@
                 <option value="dream-job">What was your dream job as a child?</option>
                 <option value="highschool-mascot">What was your high school mascot?</option>
               </select>
-              <div *ngIf="registerForm.submitted && question1.invalid" class="error">
-                You must choose the Security Question 1
+              <div *ngIf="employerForm.submitted && question1.invalid" class="error">
+                This is required
               </div>
             </div>
 
@@ -242,12 +239,12 @@
                 type="text"
                 id="answer1"
                 name="answer1"
-                [(ngModel)]="user.answer1"
+                [(ngModel)]="employer.answer1"
                 #answer1="ngModel"
                 required
               />
               <p id="small-text">1 to 30 letters and/or numbers</p>
-              <div *ngIf="registerForm.submitted && answer1.invalid" class="error">
+              <div *ngIf="employerForm.submitted && answer1.invalid" class="error">
                 Please provide an answer for Security Question 1
               </div>
             </div>
@@ -259,7 +256,7 @@
               <select
                 id="question2"
                 name="question2"
-                [(ngModel)]="user.question2"
+                [(ngModel)]="employer.question2"
                 #question2="ngModel"
                 required
               >
@@ -281,7 +278,7 @@
                 <option value="dream-job">What was your dream job as a child?</option>
                 <option value="highschool-mascot">What was your high school mascot?</option>
               </select>
-              <div *ngIf="registerForm.submitted && question2.invalid" class="error">
+              <div *ngIf="employerForm.submitted && question2.invalid" class="error">
                 You must choose the Security Question 2
               </div>
             </div>
@@ -292,13 +289,13 @@
                 type="text"
                 id="answer2"
                 name="answer2"
-                [(ngModel)]="user.answer2"
+                [(ngModel)]="employer.answer2"
                 #answer2="ngModel"
                 required
               />
               <p id="small-text">1 to 30 letters and/or numbers</p>
 
-              <div *ngIf="registerForm.submitted && answer2.invalid" class="error">
+              <div *ngIf="employerForm.submitted && answer2.invalid" class="error">
                 Please provide an answer for Security Question 2
               </div>
             </div>
@@ -310,7 +307,7 @@
               <select
                 id="question3"
                 name="question3"
-                [(ngModel)]="user.question3"
+                [(ngModel)]="employer.question3"
                 #question3="ngModel"
                 required
               >
@@ -332,7 +329,7 @@
                 <option value="dream-job">What was your dream job as a child?</option>
                 <option value="highschool-mascot">What was your high school mascot?</option>
               </select>
-              <div *ngIf="registerForm.submitted && question3.invalid" class="error">
+              <div *ngIf="employerForm.submitted && question3.invalid" class="error">
                 You must choose the Security Question 3
               </div>
             </div>
@@ -342,13 +339,13 @@
                 type="text"
                 id="answer3"
                 name="answer3"
-                [(ngModel)]="user.answer3"
+                [(ngModel)]="employer.answer3"
                 #answer3="ngModel"
                 required
               />
               <p id="small-text">1 to 30 letters and/or numbers</p>
 
-              <div *ngIf="registerForm.submitted && answer3.invalid" class="error">
+              <div *ngIf="employerForm.submitted && answer3.invalid" class="error">
                 Please provide an answer for Security Question 3
               </div>
             </div>
@@ -360,7 +357,7 @@
               <select
                 id="question4"
                 name="question4"
-                [(ngModel)]="user.question4"
+                [(ngModel)]="employer.question4"
                 #question4="ngModel"
                 required
               >
@@ -382,7 +379,7 @@
                 <option value="dream-job">What was your dream job as a child?</option>
                 <option value="highschool-mascot">What was your high school mascot?</option>
               </select>
-              <div *ngIf="registerForm.submitted && question4.invalid" class="error">
+              <div *ngIf="employerForm.submitted && question4.invalid" class="error">
                 You must choose the Security Question 4
               </div>
             </div>
@@ -394,13 +391,13 @@
                 type="text"
                 id="answer4"
                 name="answer4"
-                [(ngModel)]="user.answer4"
+                [(ngModel)]="employer.answer4"
                 #answer4="ngModel"
                 required
               />
               <p id="small-text">1 to 30 letters and/or numbers</p>
 
-              <div *ngIf="registerForm.submitted && answer4.invalid" class="error">
+              <div *ngIf="employerForm.submitted && answer4.invalid" class="error">
                 Please provide an answer for Security Question 4
               </div>
             </div>
@@ -417,7 +414,7 @@
             <input
               type="checkbox"
               name="acceptAgreement"
-              [(ngModel)]="user.acceptAgreement"
+              [(ngModel)]="employer.acceptAgreement"
               required
               #acceptAgreement="ngModel"
               id="checkbox-agreement"
@@ -428,7 +425,7 @@
               above.</label
             >
           </div>
-          <div *ngIf="registerForm.submitted && acceptAgreement.invalid" id="accept-error">
+          <div *ngIf="employerForm.submitted && acceptAgreement.invalid" id="accept-error">
             Please read and accept the User Agreement to continue.
           </div>
         </div>

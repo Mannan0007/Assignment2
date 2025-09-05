@@ -1,7 +1,7 @@
 .main-div {
   /* justify-content: space-around; */
   /* background-color: aquamarine; */
-   margin-top: 2%;
+  margin-top: 2%;
   gap: 3%;
   width: 95%;
   margin-left: auto;
@@ -37,11 +37,14 @@
   /* display: flex;
     flex-direction: column;
     gap: 3%; */
-  /* background-color: red; */
+  /* background-color: green; */
   width: 50%;
   overflow-y: auto; /* enables vertical scroll inside */
   overflow-x: hidden;
-    margin-top: 1%;
+  margin-top: 1%;
+  /* padding: 2%; */
+  /* text-align: center; */
+
   &::-webkit-scrollbar-thumb:hover {
     background: #a8a8a8 !important;
   }
@@ -68,11 +71,11 @@
 }
 #message {
   /* background-color: #254074; */
+
   text-align: end;
   font-size: 14px;
   font-family: foco, sans-serif;
-    margin-bottom: 18px;
-
+  margin-bottom: 18px;
 }
 .button-header {
   /* background-color: beige; */
@@ -154,6 +157,41 @@
   margin-bottom: 10px;
   /* color: #f15d22; */
 }
+#heading-account2 {
+  margin-top: 10px;
+  /* background-color: aqua; */
+  width: 94%;
+  margin-left: auto;
+  /* line-height: 24px; */
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  color: #254074;
+  font-size: 24px;
+  margin-bottom: 10px;
+  /* color: #f15d22; */
+}
+#input-inside {
+  /* background-color: #254074; */
+  /* padding-left: 2%; */
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  height: 45px;
+  color: #495057;
+  border: 1.5px solid #dfdfdf;
+  font-size: 14px !important;
+  border-radius: 8px;
+}
+#select-type {
+  color: #777;
+  /* height: 50px; */
+  /* padding: 1%; */
+  padding-left: 1%;
+  border: 1.5px solid #dfdfdf;
+  height: 45px;
+  border-radius: 5px;
+  /* background-color: red; */
+}
 .inputs {
   display: flex;
   /* background-color:    green; */
@@ -178,42 +216,6 @@
 
   /* height: 50%; */
 }
-.dates-inputs {
-  display: flex;
-  /* background-color:    green; */
-  width: 87%;
-  justify-content: space-evenly;
-  margin-left: auto;
-  margin-right: auto;
-  height: 90px;
-  color: #777;
-  margin-bottom: 11px;
-  gap: 8%;
-
-  /* align-items: center; */
-}
-.dates-inputs input {
-  border-radius: 10px;
-  border: 1px solid gray;
-  height: 45px;
-
-  padding-left: 2%;
-  color: #777;
-
-  /* height: 50%; */
-}
-#Re-enter {
-  width: 100%;
-  /* background-color: #000; */
-}
-.renter {
-  width: 50%;
-  /* background-color: yellow; */
-}
-.enterpassword {
-  width: 50%;
-  /* background-color: gray; */
-}
 label {
   color: #254074;
   font-weight: 500;
@@ -231,12 +233,53 @@ label {
   height: 90px;
   margin-bottom: 7px;
 }
-.email-section input {
-  border-radius: 10px;
-  height: 45px;
-  border: 1px solid gray;
-  padding-left: 9px;
+.tin-section {
+  display: flex;
+  flex-direction: column;
+  width: 87%;
+  margin-left: auto;
+  margin-right: auto;
+  /* height: 40%; */
+  /* background-color: red; */
+  height: 90px;
+  margin-bottom: 11px;
 }
+.email-section2 {
+  display: flex;
+  flex-direction: column;
+  width: 87%;
+  margin-left: auto;
+  margin-right: auto;
+  /* height: 40%; */
+  /* background-color: red; */
+  height: 90px;
+  margin-bottom: 3%;
+}
+.user-section {
+  display: flex;
+  flex-direction: column;
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+  /* height: 40%; */
+  /* background-color: red; */
+  /* height: 90px; */
+  margin-bottom: 2%;
+}
+.user-section input {
+  height: 45px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  color: #000;
+}
+#email-input {
+  height: 45px;
+  padding-left: 2%;
+  border-radius: 10px;
+  border: 1px solid gray;
+  color: #000;
+}
+
 #small-labels {
   width: 83%;
   margin-left: auto;
@@ -297,7 +340,90 @@ label {
   display: flex;
   flex-direction: column;
 }
+#heading-account3 {
+  margin-top: 10px;
+  /* background-color: aqua; */
+  width: 94%;
+  margin-left: auto;
+  /* line-height: 24px; */
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  color: #254074;
+  font-size: 24px;
+  margin-bottom: 10px;
+  /* color: #f15d22; */
+}
+.creds-inputs {
+  display: flex;
+  /* background-color:    green; */
+  width: 89%;
+  justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
+  height: 90px;
+  color: #777;
+  margin-bottom: 11px;
+  gap: 8%;
 
+  /* align-items: center; */
+}
+#small-text {
+  font-size: 13px;
+  font-weight: 400;
+
+  margin-top: 5px;
+}
+.creds-inputs input {
+  /* width: 100%; */
+  border-radius: 10px;
+  border: 1px solid gray;
+  height: 45px;
+
+  padding-left: 2%;
+  color: #777;
+}
+#Re-enter {
+  width: 100%;
+  /* background-color: #000; */
+}
+.renter {
+  width: 50%;
+  /* background-color: yellow; */
+}
+.enterpassword {
+  width: 50%;
+  /* background-color: gray; */
+}
+
+.security-form {
+  margin-top: 3%;
+  /* background-color: yellow; */
+  text-align: start;
+  border: solid #f15d22 2px;
+  border-radius: 5px;
+  /* width: 90%; */
+  /* height: 100%; */
+  /* padding: 10px; */
+  padding-top: 15px;
+
+  /* max-height: 100vh; */
+}
+#heading-security {
+  /* background-color: aqua; */
+  width: 94%;
+  margin-left: auto;
+  /* line-height: 24px; */
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  color: #254074;
+  font-size: 24px;
+  margin-bottom: 10px;
+  /* color: #f15d22; */
+}
+#small-text {
+  font-size: 12px;
+  /* background-color: #254074; */
+}
 #checkbox-agreement{
   width: 41px;
   height: 51px;
@@ -333,46 +459,16 @@ label {
   color: #fff;
   background-color: #f15d22;
 }
-  .required {
+
+.error {
   color: red;
-  margin-left: 2px;
-}
- .error {
-    color: red;
-    font-size: 12px;
-    margin-top: 3px;
-  }
-  .security-form {
-  margin-top: 3%;
-  /* background-color: yellow; */
-
-  text-align: start;
-  border: solid #f15d22 2px;
-  border-radius: 5px;
-  /* width: 90%; */
-  /* height: 100%; */
-  /* padding: 10px; */
-  padding-top: 15px;
-
-  /* max-height: 100vh; */
-}
-#heading-security {
-  /* background-color: aqua; */
-  width: 94%;
-  margin-left: auto;
-  /* line-height: 24px; */
+  font-size: 13px;
   font-family: Roboto, sans-serif;
-  font-weight: 700;
-  color: #254074;
-  font-size: 24px;
-  margin-bottom: 10px;
-  /* color: #f15d22; */
+  /* margin-top: 4px;   space between input and error */
+  /* margin-bottom: 20px; space after error before next field */
+  /* display: block;    ensure it behaves like a block element */
+  /* background-color: pink; */
 }
-#small-text {
-  font-size: 12px;
-  /* background-color: #254074; */
-}
-
 #aggrement-label{
       color: #6b7280;
       font-size: 14px;
@@ -394,6 +490,15 @@ label {
     margin-top: 10px;
     width: 400px;
     margin-bottom: 10px;
+}
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+  border: 1px solid red;
+  /* margin-bottom: 10px; */
+}
+.required {
+  color: #dc3545 !important;
+  margin-left: 2px;
 }
 .errors {
   color: red;

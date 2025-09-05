@@ -1,65 +1,70 @@
+.main-div{
+  /* background-color: #0d1335; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+}
+
 /* Custom sidebar width */
 .sidebar-custom {
   width: 80% !important;
   max-width: 80%; /* optional to enforce on larger screens */
 }
 
-.nav-link{
-     padding: 5px 10px;           /* some space inside */
-  border-radius: 6px;          /* optional rounded corners */
+.nav-link {
+  padding: 5px 10px; /* some space inside */
+  border-radius: 6px; /* optional rounded corners */
   /* transition: all 0.2s ease; */
 }
 .nav-link:hover {
-  border: 2px solid #DB6431;     /* black box */
+  border: 2px solid #db6431; /* black box */
 }
-.main-nav{
-    /* gap: 30px; */
-    justify-content: space-evenly;
+.main-nav {
+  /* gap: 30px; */
+  justify-content: space-evenly;
 }
 
-.button-section{
-    /* background-color: red; */
-    display: flex;
-    width: 30%;
-    gap: 20px;
-    height: 40px;
-
+.button-section {
+  /* background-color: red; */
+  display: flex;
+  width: 30%;
+  gap: 20px;
+  height: 40px;
 }
-.nav-buttons{
-    font-family: Foco,Arial,sans-serif!important;
-    width: 40%;
-    border-radius: 8px;
-    /* border: 1px gray solid; */
-    border: #DB6431;
+.nav-buttons {
+  font-family: Foco, Arial, sans-serif !important;
+  width: 40%;
+  border-radius: 8px;
+  border: 1px #777 solid;
+  background-color: transparent;
 }
-.language-button{
-    font-family: Foco,Arial,sans-serif!important;
-    border-radius: 8px;
-    color: white;
-    background-color: #DB6431;
-    border: #DB6431;
-    
+.language-button {
+  font-family: Foco, Arial, sans-serif !important;
+  border-radius: 8px;
+  color: white;
+  background-color: #db6431;
+  border: #db6431;
+  height: 38px;
 }
-.nav-buttons:hover{
-    border: gray;
-    background-color: #DB6431;
+.nav-buttons:hover {
+  border: gray;
+  background-color: #db6431;
+  color: #fff;
 }
-.dropdown-menu{
-    background-color: #DB6431;
-    color: white;
-
+.dropdown-menu {
+  background-color: #db6431;
+  color: white;
 }
 .nav-link.active {
   font-weight: bold;
   color: #f25c2d !important; /* highlight color */
   border: 2px solid #f25c2d; /* optional underline */
 }
-.side-bar-mb{
-        color: #fff !important;
-        font-size: 20px;
-        font-weight: 700;          background: linear-gradient(to right, #111a39, #283b7f);
+.side-bar-mb {
+  color: #fff !important;
+  font-size: 20px;
+  font-weight: 700;
+  background: linear-gradient(to right, #111a39, #283b7f);
 }
-
 
 .mobile-sidebar {
   background: linear-gradient(180deg, #1c2a6d, #111a42);
@@ -89,9 +94,6 @@
 .btn-orange:hover {
   background-color: #d44b1d;
 }
-
-
-
 
 /* Mobile Offcanvas Sidebar */
 #mobileMenu.offcanvas {
