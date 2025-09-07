@@ -1,11 +1,58 @@
+<!-- Success Toast -->
+<div
+  class="toast-container position-fixed top-50 start-50 translate-middle p-3 toastzz"
+  style="z-index: 2000"
+  *ngIf="successMessage"
+>
+  <div class="toast show toastz2">
+    <div class="toast-header toastheader success-header">
+      <strong class="me-auto">Success !</strong>
+    </div>
+    <div class="toast-body bodytoast">
+      <img src="/assets/img/success.png" alt="Success" class="icon-img" />
+      <span>{{ successMessage }}</span>
+    </div>
+    <div class="toast-footer">
+      <button class="btn  close-btn" (click)="successMessage = ''">
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Error Toast -->
+<div
+  class="toast-container position-fixed top-50 start-50 translate-middle p-3 toastzz"
+  style="z-index: 2000"
+  *ngIf="errorMessage"
+>
+  <div class="toast show toastz2">
+    <div class="toast-header toastheader error-header">
+      <strong class="me-auto">Error !</strong>
+    </div>
+    <div class="toast-body bodytoast">
+      <img src="/assets/img/error.png" alt="Error" class="icon-img" />
+      <span>{{ errorMessage }}</span>
+    </div>
+    <div class="toast-footer">
+      <button class="btn btn-danger close-btn" (click)="errorMessage = ''">
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
 <div class="d-flex main-div">
   <div class="reg-forms">
     <div class="insiders">
       <div class="button-header">
-<a href="" id="back">
-          <img src="/assets/img/back 2x.png" alt=""  height="15"/>
+        <a href="" id="back">
+          <img src="/assets/img/back 2x.png" alt="" height="15" />
           Back</a
-        >        <button routerLink="/register"><span class="blue">Register</span> as Employee</button>
+        >
+        <button routerLink="/register"><span class="blue">Register</span> as Employee</button>
       </div>
       <h1 id="heading-main"><span class="blue">Create</span> Employer Account</h1>
       <h4 id="message">Fields marked with <span class="errors">*</span> are required.</h4>
@@ -59,32 +106,40 @@
             </div>
           </div>
 
-        <div class="tin-section" style="position: relative;">
-  <label>TIN/EIN<span class="required">*</span></label>
-  <input
-    [type]="showTIN ? 'text' : 'password'"
-    name="tin"
-    [(ngModel)]="employer.tin"
-    required
-    #tin="ngModel"
-    maxlength="10"
-    id="input-inside"
-    (input)="formatTIN($event)"
-  />
+          <div class="tin-section" style="position: relative">
+            <label>TIN/EIN<span class="required">*</span></label>
+            <input
+              [type]="showTIN ? 'text' : 'password'"
+              name="tin"
+              [(ngModel)]="employer.tin"
+              required
+              #tin="ngModel"
+              maxlength="10"
+              id="input-inside"
+              (input)="formatTIN($event)"
+            />
 
-  <!-- 👁 Toggle Icon -->
-  <img
-    [src]="showTIN ? '/assets/img/closedEye.png' : '/assets/img/eye.png'"
-    (click)="toggleTIN()"
-    alt="Toggle TIN"
-    style="position: absolute; right: 10px; top: 55%; transform: translateY(-50%); width: 24px; height: 18px; cursor: pointer;"
-  />
+            <!-- 👁 Toggle Icon -->
+            <img
+              [src]="showTIN ? '/assets/img/closedEye.png' : '/assets/img/eye.png'"
+              (click)="toggleTIN()"
+              alt="Toggle TIN"
+              style="
+                position: absolute;
+                right: 10px;
+                top: 55%;
+                transform: translateY(-50%);
+                width: 24px;
+                height: 18px;
+                cursor: pointer;
+              "
+            />
 
-  <div *ngIf="employerForm.submitted && tin.errors" class="error">
-    <span *ngIf="tin.errors['required']">TIN is required</span>
-    <span *ngIf="tin.errors['pattern']">Invalid TIN</span>
-  </div>
-</div>
+            <div *ngIf="employerForm.submitted && tin.errors" class="error">
+              <span *ngIf="tin.errors['required']">TIN is required</span>
+              <span *ngIf="tin.errors['pattern']">Invalid TIN</span>
+            </div>
+          </div>
 
           <h3 id="heading-account2">Business Main Point of Contact</h3>
 
@@ -165,6 +220,7 @@
                 minlength="6"
                 #password="ngModel"
               />
+              <!-- <p id="small-text-password">9 to 15 characters with at least one number, one uppercase letter, one lowercase letter and one special character (i.e. !,#,%).</p> -->
               <div *ngIf="employerForm.submitted && password.invalid" class="error">
                 Password is required (min 6 chars)
               </div>
@@ -211,22 +267,9 @@
                 required
               >
                 <option value="" disabled selected>Select a question from drop-down menu</option>
-                <option value="bones">How many bones have you broken?</option>
-                <option value="first-job-city">In what city or town was your first job?</option>
-                <option value="childhood-friend">
-                  What is the name of your favorite childhood friend?
+                <option *ngFor="let q of questions" [value]="q.value">
+                  {{ q.label }}
                 </option>
-                <option value="street-number">
-                  What is the street number of the house you grew up in?
-                </option>
-                <option value="favorite-sport">What is your favorite sport?</option>
-                <option value="first-car-color">What was the color of your first car?</option>
-                <option value="first-car-make">
-                  What was the make and model of your first car?
-                </option>
-                <option value="first-pet">What was the name of your first pet?</option>
-                <option value="dream-job">What was your dream job as a child?</option>
-                <option value="highschool-mascot">What was your high school mascot?</option>
               </select>
               <div *ngIf="employerForm.submitted && question1.invalid" class="error">
                 This is required
@@ -261,22 +304,9 @@
                 required
               >
                 <option value="" disabled selected>Select a question from drop-down menu</option>
-                <option value="bones">How many bones have you broken?</option>
-                <option value="first-job-city">In what city or town was your first job?</option>
-                <option value="childhood-friend">
-                  What is the name of your favorite childhood friend?
+                <option *ngFor="let q of questions" [value]="q.value">
+                  {{ q.label }}
                 </option>
-                <option value="street-number">
-                  What is the street number of the house you grew up in?
-                </option>
-                <option value="favorite-sport">What is your favorite sport?</option>
-                <option value="first-car-color">What was the color of your first car?</option>
-                <option value="first-car-make">
-                  What was the make and model of your first car?
-                </option>
-                <option value="first-pet">What was the name of your first pet?</option>
-                <option value="dream-job">What was your dream job as a child?</option>
-                <option value="highschool-mascot">What was your high school mascot?</option>
               </select>
               <div *ngIf="employerForm.submitted && question2.invalid" class="error">
                 You must choose the Security Question 2
@@ -312,22 +342,9 @@
                 required
               >
                 <option value="" disabled selected>Select a question from drop-down menu</option>
-                <option value="bones">How many bones have you broken?</option>
-                <option value="first-job-city">In what city or town was your first job?</option>
-                <option value="childhood-friend">
-                  What is the name of your favorite childhood friend?
+                <option *ngFor="let q of questions" [value]="q.value">
+                  {{ q.label }}
                 </option>
-                <option value="street-number">
-                  What is the street number of the house you grew up in?
-                </option>
-                <option value="favorite-sport">What is your favorite sport?</option>
-                <option value="first-car-color">What was the color of your first car?</option>
-                <option value="first-car-make">
-                  What was the make and model of your first car?
-                </option>
-                <option value="first-pet">What was the name of your first pet?</option>
-                <option value="dream-job">What was your dream job as a child?</option>
-                <option value="highschool-mascot">What was your high school mascot?</option>
               </select>
               <div *ngIf="employerForm.submitted && question3.invalid" class="error">
                 You must choose the Security Question 3
@@ -362,22 +379,9 @@
                 required
               >
                 <option value="" disabled selected>Select a question from drop-down menu</option>
-                <option value="bones">How many bones have you broken?</option>
-                <option value="first-job-city">In what city or town was your first job?</option>
-                <option value="childhood-friend">
-                  What is the name of your favorite childhood friend?
+                <option *ngFor="let q of questions" [value]="q.value">
+                  {{ q.label }}
                 </option>
-                <option value="street-number">
-                  What is the street number of the house you grew up in?
-                </option>
-                <option value="favorite-sport">What is your favorite sport?</option>
-                <option value="first-car-color">What was the color of your first car?</option>
-                <option value="first-car-make">
-                  What was the make and model of your first car?
-                </option>
-                <option value="first-pet">What was the name of your first pet?</option>
-                <option value="dream-job">What was your dream job as a child?</option>
-                <option value="highschool-mascot">What was your high school mascot?</option>
               </select>
               <div *ngIf="employerForm.submitted && question4.invalid" class="error">
                 You must choose the Security Question 4
@@ -400,6 +404,12 @@
               <div *ngIf="employerForm.submitted && answer4.invalid" class="error">
                 Please provide an answer for Security Question 4
               </div>
+            </div>
+            <div
+              *ngIf="employerForm.submitted && checkDuplicateQuestions()"
+              id="same-question-error"
+            >
+              Two questions cannot be the same. Please choose a different question.
             </div>
           </div>
         </div>

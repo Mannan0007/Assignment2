@@ -178,12 +178,12 @@
               placeholder="Re-Enter Password"
               #confirmPassword="ngModel"
             />
-            <div
+            <!-- <div
               *ngIf="registerForm.submitted && confirmPassword.invalid"
               style="color: red; font-size: 13px"
             >
               Confirm Password is required
-            </div>
+            </div> -->
             <div
               *ngIf="registerForm.submitted && user.password !== user.confirmPassword"
               style="color: red; font-size: 13px"
@@ -213,27 +213,14 @@
                 #question1="ngModel"
                 required
               >
-                <option value="" disabled selected>Select a question from drop-down menu</option>
-                <option value="bones">How many bones have you broken?</option>
-                <option value="first-job-city">In what city or town was your first job?</option>
-                <option value="childhood-friend">
-                  What is the name of your favorite childhood friend?
+                <option value="" disabled>Select a question from drop-down menu</option>
+                <option *ngFor="let q of questions" [value]="q.value">
+                  {{ q.label }}
                 </option>
-                <option value="street-number">
-                  What is the street number of the house you grew up in?
-                </option>
-                <option value="favorite-sport">What is your favorite sport?</option>
-                <option value="first-car-color">What was the color of your first car?</option>
-                <option value="first-car-make">
-                  What was the make and model of your first car?
-                </option>
-                <option value="first-pet">What was the name of your first pet?</option>
-                <option value="dream-job">What was your dream job as a child?</option>
-                <option value="highschool-mascot">What was your high school mascot?</option>
               </select>
+
               <div *ngIf="registerForm.submitted && question1.invalid" class="error">
-                You must choose the Security Question 1
-              </div>
+   This is required              </div>
             </div>
 
             <div class="d-flex flex-column">
@@ -263,23 +250,10 @@
                 #question2="ngModel"
                 required
               >
-                <option value="" disabled selected>Select a question from drop-down menu</option>
-                <option value="bones">How many bones have you broken?</option>
-                <option value="first-job-city">In what city or town was your first job?</option>
-                <option value="childhood-friend">
-                  What is the name of your favorite childhood friend?
+                <option value="" disabled>Select a question from drop-down menu</option>
+                <option *ngFor="let q of questions" [value]="q.value">
+                  {{ q.label }}
                 </option>
-                <option value="street-number">
-                  What is the street number of the house you grew up in?
-                </option>
-                <option value="favorite-sport">What is your favorite sport?</option>
-                <option value="first-car-color">What was the color of your first car?</option>
-                <option value="first-car-make">
-                  What was the make and model of your first car?
-                </option>
-                <option value="first-pet">What was the name of your first pet?</option>
-                <option value="dream-job">What was your dream job as a child?</option>
-                <option value="highschool-mascot">What was your high school mascot?</option>
               </select>
               <div *ngIf="registerForm.submitted && question2.invalid" class="error">
                 You must choose the Security Question 2
@@ -314,23 +288,10 @@
                 #question3="ngModel"
                 required
               >
-                <option value="" disabled selected>Select a question from drop-down menu</option>
-                <option value="bones">How many bones have you broken?</option>
-                <option value="first-job-city">In what city or town was your first job?</option>
-                <option value="childhood-friend">
-                  What is the name of your favorite childhood friend?
+                <option value="" disabled>Select a question from drop-down menu</option>
+                <option *ngFor="let q of questions" [value]="q.value">
+                  {{ q.label }}
                 </option>
-                <option value="street-number">
-                  What is the street number of the house you grew up in?
-                </option>
-                <option value="favorite-sport">What is your favorite sport?</option>
-                <option value="first-car-color">What was the color of your first car?</option>
-                <option value="first-car-make">
-                  What was the make and model of your first car?
-                </option>
-                <option value="first-pet">What was the name of your first pet?</option>
-                <option value="dream-job">What was your dream job as a child?</option>
-                <option value="highschool-mascot">What was your high school mascot?</option>
               </select>
               <div *ngIf="registerForm.submitted && question3.invalid" class="error">
                 You must choose the Security Question 3
@@ -364,23 +325,10 @@
                 #question4="ngModel"
                 required
               >
-                <option value="" disabled selected>Select a question from drop-down menu</option>
-                <option value="bones">How many bones have you broken?</option>
-                <option value="first-job-city">In what city or town was your first job?</option>
-                <option value="childhood-friend">
-                  What is the name of your favorite childhood friend?
+                <option value="" disabled>Select a question from drop-down menu</option>
+                <option *ngFor="let q of questions" [value]="q.value">
+                  {{ q.label }}
                 </option>
-                <option value="street-number">
-                  What is the street number of the house you grew up in?
-                </option>
-                <option value="favorite-sport">What is your favorite sport?</option>
-                <option value="first-car-color">What was the color of your first car?</option>
-                <option value="first-car-make">
-                  What was the make and model of your first car?
-                </option>
-                <option value="first-pet">What was the name of your first pet?</option>
-                <option value="dream-job">What was your dream job as a child?</option>
-                <option value="highschool-mascot">What was your high school mascot?</option>
               </select>
               <div *ngIf="registerForm.submitted && question4.invalid" class="error">
                 You must choose the Security Question 4
@@ -403,6 +351,9 @@
               <div *ngIf="registerForm.submitted && answer4.invalid" class="error">
                 Please provide an answer for Security Question 4
               </div>
+            </div>
+            <div *ngIf="registerForm.submitted && checkDuplicateQuestions()" id="same-question-error">
+              Two questions cannot be the same. Please choose a different question.
             </div>
           </div>
         </div>

@@ -339,7 +339,7 @@ label {
 }
  .error {
     color: red;
-    font-size: 12px;
+    font-size: 13px;
     margin-top: 3px;
   }
   .security-form {
@@ -393,6 +393,20 @@ label {
     border-radius: 4px;
     margin-top: 10px;
     width: 400px;
+    margin-bottom: 10px;
+}
+#same-question-error{
+   color: #d64545;
+  font-size: 15px;
+  font-weight: 300;
+  font-family: Roboto, sans-serif;
+  background-color: #ff00001a;
+  /* margin-left: 10px; */
+  text-align: start;
+      padding: 5px 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    width: 270px;
     margin-bottom: 10px;
 }
 .errors {

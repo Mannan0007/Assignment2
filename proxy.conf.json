@@ -1,0 +1,10 @@
+{
+  "/api": {
+    "target": "https://cd7b6dbcaeab.ngrok-free.app/ICHRA-CP-API/api/public",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}

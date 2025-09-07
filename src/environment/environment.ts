@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  baseUrl: 'http://localhost:3000',
+  baseUrl: 'https://cd7b6dbcaeab.ngrok-free.app/ICHRA-CP-API/api/public',
 };
